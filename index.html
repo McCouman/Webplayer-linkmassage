@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Podbe Test</title>
+
+<link  href="Source/css/PodbeDialog.css" rel="stylesheet">
+<style>
+.myDialog {
+	width: 350px;
+	height: 130px;
+}
+.myDialog iframe {
+	width: 350px;
+	height: 130px;
+	border-radius: 0 0 7px 7px;
+	-moz-border-radius: 0 0 7px 7px;
+	-webkit-border-radius: 0 0 7px 7px;
+}
+</style>
+
+<script src="Source/mootools-core.js"></script>
+<script src="Source/Overlay.js"></script>
+<script src="Source/MooDialog.js"></script>
+<script src="Source/MooDialog.Fx.js"></script>
+<script src="Source/MooDialog.Alert.js"></script>
+<script src="Source/MooDialog.IFrame.js"></script>
+
+</head>
+<body>
+
+<h1>Player</h1>
+
+
+<p>
+<script>
+window.addEvent('domready', function(){
+	$('iframe').addEvent('click', function(e){
+		e.stop();
+		new MooDialog.IFrame('http://hitmist.podspot.de/files/HMG046-Tapire-schmecken-rollig-am-besten.mp3', {
+			title: 'Podbe Player',
+			'class': 'MooDialog myDialog'
+		});
+	});
+});
+</script>
+	<a href="#" id="iframe">1 Hitmist</a>
+</p>
+
+
+
+
+
+
+<p>
+<script>
+window.addEvent('domready', function(){
+	$('iframe2').addEvent('click', function(e){
+		e.stop();
+		new MooDialog.IFrame('http://feedproxy.google.com/~r/sprechwaisen/~5/7aQcgCEE04Y/SW003a.mp3', {
+			title: 'Podbe Player',
+			'class': 'MooDialog myDialog'
+		});
+	});
+});
+</script>
+	<a href="#" id="iframe2">2 Sprechweisen</a>
+</p>
+
+
+</body>
+</html>
